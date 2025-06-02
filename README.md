@@ -24,7 +24,7 @@ Mass email delete from sender, first right click the email and click find emails
     const checkbox = selectAllContainer.querySelector('span[role="checkbox"]');
     if (checkbox && checkbox.getAttribute('aria-checked') === 'false') checkbox.click();
 
-    await wait(500); // less wait after selecting
+    await wait(500);
 
     const firstEmailRow = document.querySelector('tr[role="row"]');
     if (!firstEmailRow) break;
@@ -36,7 +36,7 @@ Mass email delete from sender, first right click the email and click find emails
       buttons: 2,
     }));
 
-    await wait(500); // less wait after context menu
+    await wait(500);
 
     const menuItems = [...document.querySelectorAll('[role="menuitem"]')];
     const deleteMenuItem = menuItems.find(item => item.textContent.trim().toLowerCase() === 'delete');
@@ -51,7 +51,7 @@ Mass email delete from sender, first right click the email and click find emails
     await wait(50);
     simulateMouseEvent(deleteMenuItem, 'click');
 
-    await wait(3000); // shorter wait for Gmail to process
+    await wait(3000); // wait for Gmail to process
   }
   console.log("Done deleting all emails.");
 })();
