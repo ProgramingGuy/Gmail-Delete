@@ -2,7 +2,7 @@
 Mass email delete from sender, first right click the email and click find emails from and it'll display all emails from that sender. Then paste the code in the dev console and run it and it'll delete all the emails from that sender.
 
 ```javascript
-(async function deleteAllEmailsFast() {
+(async function deleteAllEmailsAutomated() {
   const wait = ms => new Promise(res => setTimeout(res, ms));
 
   function simulateMouseEvent(element, eventType) {
