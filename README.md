@@ -1,9 +1,7 @@
 # Email Delete, GMail.
-Mass email delete from sender.
+Mass email delete from sender, first right click the email and click find emails from and it'll display all emails from that sender. Then paste the code in the dev console and run it and it'll delete all the emails from that sender.
 
-Right click the email and click find emails from.
-then paste the code in the dev console and run it.
-
+```javascript
 (async function deleteAllEmailsFast() {
   const wait = ms => new Promise(res => setTimeout(res, ms));
 
@@ -57,4 +55,4 @@ then paste the code in the dev console and run it.
   }
   console.log("Done deleting all emails.");
 })();
-
+```
