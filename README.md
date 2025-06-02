@@ -42,7 +42,6 @@ Mass email delete from sender, first right click the email and click find emails
     const deleteMenuItem = menuItems.find(item => item.textContent.trim().toLowerCase() === 'delete');
     if (!deleteMenuItem) break;
 
-    // Simulate mouse events with shorter delays
     simulateMouseEvent(deleteMenuItem, 'mouseover');
     await wait(50);
     simulateMouseEvent(deleteMenuItem, 'mousedown');
